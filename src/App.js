@@ -1,5 +1,5 @@
 import ProductDetail from './containers/ProductDetail'
-import ProductsList from './containers/ProductsList'
+import ProductList from './containers/ProductList'
 import Header from "./containers/Header";
 import {BrowserRouter as Router, Routes, Route,} from "react-router-dom";
 
@@ -9,8 +9,8 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path='/' exact component={ProductsList} />
-          <Route path='/product/:productId' exact component={ProductDetail} />
+          <Route path='/'  element={ <ProductList />} />
+          <Route path='/product/:productId'  element={<ProductDetail/>} />
           <Route> 404 Page Not Found</Route>
         </Routes>
       </Router>
